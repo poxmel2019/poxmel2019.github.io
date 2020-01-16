@@ -13,42 +13,66 @@ namespace conburo
         static void Main(string[] args)
         {
             /*
-            List<int> nums = new List<int>() { 1, 2, 3, 4, 5 };
-            ShowCol(nums);
-            Console.WriteLine();
-            
-            nums.Add(6);
-            ShowCol(nums);
-            Console.WriteLine();
-            
-            nums.AddRange(new int[] {7, 8, 9});
-            ShowCol(nums);
-            Console.WriteLine();
-            
-            nums.Insert(0, 666);
-            ShowCol(nums);
-            Console.WriteLine();
-            
-            nums.RemoveAt(1);
-            ShowCol(nums);
-            Console.WriteLine();
-            
-            Console.WriteLine();
-            Console.ReadKey();
-            */
-            List<Person> people = new List<Person>(3);
+            Dictionary<int, string> countries = new Dictionary<int, string>(5);
+            countries.Add(1, "Russia");
+            countries.Add(2, "Great Britain");
+            countries.Add(3, "USA");
+            countries.Add(4, "France");
+            countries.Add(5, "China");
 
-            people.Add(new Person() { Name = "Tom" });
-            people.Add(new Person() { Name = "Bill" });
+            //foreach (KeyValuePair<int,string> keyValue in countries)
+            //{
+            //    Console.WriteLine(keyValue.Key + " - " + keyValue.Value);
+            //}
 
-            foreach (Person p in people)
+            Dictionary<char, Person> people = new Dictionary<char, Person>();
+            people.Add('b', new Person() { Name = "Bill"});
+            people.Add('t', new Person() { Name = "Tom" });
+            people.Add('j', new Person() { Name = "John" });
+            people.Add('d', new Person() { Name = "Dilan" });
+            people['e'] = new Person() { Name = "Eric" };
+
+            foreach (KeyValuePair<char, Person> keyValue in people)
             {
-                Console.WriteLine(p.Name);
-
+                Console.WriteLine(keyValue.Key + " - " + keyValue.Value.Name);
             }
 
-            Console.ReadKey();
+            foreach(char c in people.Keys)
+            {
+                Console.WriteLine(c);
+            }
 
+            foreach(Person n in people.Values)
+            {
+                Console.WriteLine(n.Name);
+            }
+            */
+            Dictionary<string, string> capitals = new Dictionary<string, string>
+            {
+                { "France","Paris"},
+                { "Germany","Berlin"},
+                { "Great Britain","London"},
+            };
+
+            foreach(var pair in capitals)
+            {
+                Console.WriteLine("{0} - {1}",pair.Key, pair.Value);
+            }
+
+            Dictionary<string, string> capitals2 = new Dictionary<string, string>
+            {
+                [ "France"] = "Paris",
+                [ "Germany"] = "Berlin",
+                [ "Great Britain"] = "London",
+            };
+
+            foreach (var pair in capitals2)
+            {
+                Console.WriteLine("{0} - {1}", pair.Key, pair.Value);
+            }
+
+            Console.WriteLine();
+            Console.Read();
 
         }
         public static void ShowCol(List<int> list)
