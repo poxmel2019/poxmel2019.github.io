@@ -12,9 +12,13 @@ namespace conburo
     {
         static void Main(string[] args)
         {
-            string s;
-            s += "string";
-            Console.WriteLine(s);
+            decimal num = 1234;
+            float num2 = 1234;
+
+
+            Console.WriteLine(num>num2);
+            Console.WriteLine(num.GetType());
+
             Console.WriteLine();
             Console.Read();
 
