@@ -12,8 +12,9 @@ namespace conburo
     {
         static void Main(string[] args)
         {
-            Decimal num = 19.23M;
-            Console.WriteLine(num);
+            string s;
+            s += "string";
+            Console.WriteLine(s);
             Console.WriteLine();
             Console.Read();
 
