@@ -12,31 +12,8 @@ namespace conburo
     {
         static void Main(string[] args)
         {
-           
-            Dictionary<string, string> capitals = new Dictionary<string, string>
-            {
-                { "France","Paris"},
-                { "Germany","Berlin"},
-                { "Great Britain","London"},
-            };
-
-            foreach(var pair in capitals)
-            {
-                Console.WriteLine("{0} - {1}",pair.Key, pair.Value);
-            }
-
-            Dictionary<string, string> capitals2 = new Dictionary<string, string>
-            {
-                [ "France"] = "Paris",
-                [ "Germany"] = "Berlin",
-                [ "Great Britain"] = "London",
-            };
-
-            foreach (var pair in capitals2)
-            {
-                Console.WriteLine("{0} - {1}", pair.Key, pair.Value);
-            }
-
+            Decimal num = 19.23M;
+            Console.WriteLine(num);
             Console.WriteLine();
             Console.Read();
 
