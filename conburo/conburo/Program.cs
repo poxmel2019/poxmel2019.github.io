@@ -30,45 +30,26 @@ namespace conburo
     }
     class Program
     {
-        static void Main(string[] args)
-        {
-            Dictionary<string,int?> dict = new Dictionary<string,int?>();
-            dict.Add("provider",123456);
-            dict.Add("service",null);
-            
-            foreach(KeyValuePair<string,int?> kv in dict)
-            {
-                Console.WriteLine(kv.Key + " - " + kv.Value);
+        static void Main(string[] args) {
+
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            dict.Add("one","1");
+            dict.Add("two",null);
+            string wor = null;
+            foreach(KeyValuePair<string,string> el in dict)
+            //foreach (var el in dict)
+
+                {
+                    if (el.Value == null) { wor = "2"; }
+                Console.WriteLine(el.Key + " - " + el.Value);
+
             }
+            Console.WriteLine(wor);
 
-            List<User> users = new List<User>()
-            {
-                new User { Name = "Tom", Age = 23},
-                new User { Name = "Sam", Age = 43},
-                new User { Name = "Bill", Age = 35},
-                new User { Name = "Shiva", Age = null}
-            };
-
-            bool res1 = users.Any(u => u.Age < 20 || u.Age == null);
-            if (res1)
-
-                Console.WriteLine("There are users with age less than 20");
-
-            else
-                Console.WriteLine("All users have age more than 20");
-
-            bool res2 = users.Any(u => u.Name.StartsWith("T"));
-            if (res2)
-            {
-                Console.WriteLine("There are users whose names starts with \"T\"");
-            }
-            else
-                Console.WriteLine("There are no users whose names starts with \"T\"");
-            Console.WriteLine(res1);
-            Console.WriteLine(res2);
-
-            string ass = null;
-            Console.WriteLine(ass);
+            string word = "";
+            string empty = null;
+            //string word2 = empty.ToString();
+            //Console.WriteLine(word2.GetType());
             Console.WriteLine();
             Console.Read();
 
