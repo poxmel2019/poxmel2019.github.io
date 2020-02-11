@@ -32,31 +32,35 @@ namespace conburo
     {
         static void Main(string[] args) {
 
-            Dictionary<string, string> dict = new Dictionary<string, string>();
-            dict.Add("one","1");
-            dict.Add("two",null);
-            string wor = null;
-            foreach(KeyValuePair<string,string> el in dict)
-            //foreach (var el in dict)
 
-                {
-                    if (el.Value == null) { wor = "2"; }
-                Console.WriteLine(el.Key + " - " + el.Value);
+            List<int?> nums = new List<int?>();
+            nums.Add(1);
+            nums.Add(2);
+            nums.Add(null);
+            nums.Add(3);
 
-            }
-            Console.WriteLine(wor);
-
-            string word = "";
-            string empty = null;
-            //string word2 = empty.ToString();
-            //Console.WriteLine(word2.GetType());
+            ShowCol(nums);
             Console.WriteLine();
             Console.Read();
 
         }
+        public static void ShowCol(int[] list)
+        {
+            foreach (int el in list)
+            {
+                Console.WriteLine(el);
+            }
+        }
         public static void ShowCol(List<int> list)
         {
-            foreach (object el in list)
+            foreach (int el in list)
+            {
+                Console.WriteLine(el);
+            }
+        }
+        public static void ShowCol(List<int?> list)
+        {
+            foreach(int? el in list)
             {
                 Console.WriteLine(el);
             }
