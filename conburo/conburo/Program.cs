@@ -30,17 +30,11 @@ namespace conburo
     }
     class Program
     {
-        static void Main(string[] args) {
-
-
-            List<int?> nums = new List<int?>();
-            nums.Add(1);
-            nums.Add(2);
-            nums.Add(null);
-            nums.Add(3);
-
-            ShowCol(nums);
-            Console.WriteLine();
+        static void Main(string[] args)
+        {
+            double a = 0.1 + 0.2;
+            //ShowCol(nums);
+            Console.WriteLine((float)a == (float)0.3);
             Console.Read();
 
         }
