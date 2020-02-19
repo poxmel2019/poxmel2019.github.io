@@ -32,9 +32,10 @@ namespace conburo
     {
         static void Main(string[] args)
         {
-            double a = 0.1 + 0.2;
-            //ShowCol(nums);
-            Console.WriteLine((float)a == (float)0.3);
+            int num = 1;
+            int? num2 = (int?)num;
+            Console.WriteLine(num);
+            Console.WriteLine(num2);
             Console.Read();
 
         }
